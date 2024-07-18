@@ -63,12 +63,12 @@ const App = () => {
     }
   };
   useEffect(() => {
-    const call = async () => {
-      await getuser();
-    };
     if (!localStorage.getItem("token")) {
       return;
     } else {
+      const call = async () => {
+        await getuser();
+      };
       call();
     }
   }, []);

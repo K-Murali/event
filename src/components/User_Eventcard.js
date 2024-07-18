@@ -35,17 +35,14 @@ const UserEventsdetail = (props) => {
     "December",
   ];
   const navigate = useNavigate();
-  const { delete_event, edit_event, update_event } = useContext(Eventcontext);
+  const { delete_event, update_event } = useContext(Eventcontext);
 
   const [photo, setphoto] = useState(null);
   const [newevent, setnewevent] = useState({
     photo: props.photo,
   });
 
-  const handle_readmore = () => {
-    localStorage.setItem("eventid", props.id);
-    navigate("/readmore");
-  };
+  
   const handleedit = async () => {
     if (photo) {
       const cloudinary = new FormData();
