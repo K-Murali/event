@@ -79,7 +79,6 @@ const App = () => {
       <Event_State>
         <div>
           <Router>
-            
             <Navbar user={user} setuser={setuser} />
 
             <Routes>
@@ -113,6 +112,11 @@ const App = () => {
                 exact
                 path="/registered"
                 element={<Mybookings user={user} />}
+              />
+              <Route
+                exact
+                path="/readmore"
+                element={<Readmore user={user} />}
               />
             </Routes>
           </Router>

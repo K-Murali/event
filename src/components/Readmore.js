@@ -6,7 +6,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import { Eventcontext } from "../context/Event_State";
 
-const Readmore = () => {
+const Readmore = ({ user }) => {
   const [event, setevent] = useState(null);
   const [booked, setbooked] = useState(null);
   const { get_event_byid } = useContext(Eventcontext);

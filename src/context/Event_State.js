@@ -47,26 +47,26 @@ const Event_State = (props) => {
     }
   };
 
-  // const getuser = async () => {
-  //   try {
-  //     console.log(localStorage.getItem("token"));
-  //     const options = {
-  //       method: "GET",
-  //       headers: {
-  //         Authorization: `Bearer ${localStorage.getItem("token")}`,
-  //       },
-  //     };
-  //     const res = await fetch(`${BASE_URL}/api/users/getuserdetails`, options);
-  //     const json = await res.json();
-  //     localStorage.setItem("role", json.user.role);
+  const getuser = async () => {
+    try {
+      console.log(localStorage.getItem("token"));
+      const options = {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      };
+      const res = await fetch(`${BASE_URL}/api/users/getuserdetails`, options);
+      const json = await res.json();
+      localStorage.setItem("role", json.user.role);
 
-  //     setuser(json.user);
-  //   } catch (e) {
-  //     console.log("this is error message" + e.message);
-  //     setmessage(e.message);
-  //     setalert(true);
-  //   }
-  // };
+      setuser(json.user);
+    } catch (e) {
+      console.log("this is error message" + e.message);
+      setmessage(e.message);
+      setalert(true);
+    }
+  };
 
   const get_event_byid = async (eventid) => {
     try {
@@ -118,7 +118,7 @@ const Event_State = (props) => {
         },
         body: JSON.stringify(newnote),
       };
-      
+
       const res = await fetch(`${BASE_URL}/api/events/addevent`, options);
       const json = await res.json();
 
@@ -215,7 +215,7 @@ const Event_State = (props) => {
       };
       setloadval(60);
       const res = await fetch(`${BASE_URL}/api/events/getuserevents`, options);
-      setloadval(80);
+      setloadval(0);
       const json = await res.json();
       setloadval(100);
       return json;
@@ -428,6 +428,7 @@ const Event_State = (props) => {
         delete_event,
         update_event,
         get_user_events,
+        getuser,
         get_all_events,
         get_new_events,
         accept_event,
