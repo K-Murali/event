@@ -17,6 +17,7 @@ const Expensebox = ({ id, name }) => {
   const [showTables, setShowTables] = useState(false);
 
   const fetchExpenses = async () => {
+    setShowTables(true);
     const response = await get_all_expenses(id);
     setLoader(false);
     setEntries(response.data);
@@ -116,9 +117,7 @@ const Expensebox = ({ id, name }) => {
           >
             <button
               type="button"
-              onClick={() => {
-                fetchExpenses(), setShowTables(true);
-              }}
+              onClick={fetchExpenses}
               className="text-sm  underline absolute top-2 right-2 text-blue-500 hover:text-gray-700"
             >
               {"<-back"}

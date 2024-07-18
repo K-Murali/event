@@ -106,7 +106,7 @@ const UserEventsdetail = (props) => {
               <div className="h-fit flex flex-row justify-center overflow-hidden">
                 <h1 className="text-xl font-semibold text-center">
                   <div
-                    onClick={(e) => {
+                    onClick={() => {
                       localStorage.setItem("eventid", props.id),
                         console.log(props.id),
                         navigate("/readmore");

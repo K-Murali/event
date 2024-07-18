@@ -1,5 +1,5 @@
 {
-  "homepage":"http://K-Murali.github.io/event",
+  "homepage": "http://K-Murali.github.io/event",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -43,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "daisyui": "^4.12.10"
+    "daisyui": "^4.12.10",
+    "gh-pages": "^6.1.1"
   }
 }
