@@ -225,7 +225,7 @@ const Event_State = (props) => {
       return json;
     } catch (e) {
       console.log("this is error message" + e.message);
-      setmessage(e.message);
+      setmessage("from get all event" + e.message);
       setalert(true);
     }
   };
