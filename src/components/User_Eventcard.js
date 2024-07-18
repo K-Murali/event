@@ -198,7 +198,7 @@ const UserEventsdetail = (props) => {
                     onClick={handle_mailclick}
                     className="flex p-1 border-2 rounded  cursor-pointer hover:text-blue-500 w-36 justify-center items-center"
                   >
-                    <span>Send message</span>
+                    <span>Send mail</span>
                     &nbsp;
                     <BiLogoGmail className=" text-gray-500 w-4 h-6" />
                   </div>
