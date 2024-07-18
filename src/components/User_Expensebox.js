@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Eventcontext } from "../context/Event_State";
-import { Form, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Expensebox = ({ id, name }) => {
   const navigate = useNavigate();

@@ -1,5 +1,6 @@
 import React from "react";
-import { useEffect, useNavigate, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { Eventcontext } from "../context/Event_State";
 import Eventscard from "./Eventscard";
 
