@@ -1,0 +1,75 @@
+.note-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .note-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icons {
+    display: flex;
+    justify-content:flex-start;
+  }
+  
+  .icon {
+    margin: 0 5px;
+  }
+.instagram-post {
+  width: 500px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.post-likes,
+.post-caption,
+.comments-section {
+  padding: 10px;
+}
+
+.hashtags {
+  color: #00376b;
+}
+
+.comment {
+  margin-top: 5px;
+}
+
+.add-comment {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #dbdbdb;
+  outline: none;
+}
