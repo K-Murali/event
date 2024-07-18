@@ -1,9 +1,10 @@
 import React from "react";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useNavigate, useState, useContext } from "react";
 import { Eventcontext } from "../context/Event_State";
 import Eventscard from "./Eventscard";
 
 const NewEvents = ({ user }) => {
+  const naviagte = useNavigate();
   const [events, setEvents] = useState(null);
   const { get_new_events, loadingflag } = useContext(Eventcontext);
 
