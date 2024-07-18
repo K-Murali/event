@@ -72,7 +72,7 @@ const Eventscard = (props) => {
     }
   };
   const handleclick = () => {
-    document.getElementById(`my_modal_${props.id}`).showModal();
+    document.getElementById(`update_event_${props.id}`).showModal();
   };
 
   const handle_accept = async () => {
@@ -162,10 +162,11 @@ const Eventscard = (props) => {
                   <div className="hidden lg:flex md:flex">
                     <span className="  font-bold">Venue:</span>
                     &nbsp;
-                    <span className=" font-extrabold text-gray-700">
-                      {props.venue}{" "}
+                    <span className="mr-1 font-extrabold text-gray-700">
+                      {props.venue}
+                      {"  "}
                     </span>
-                    at
+                    {" at"}
                     <span className="text-bold  font-extrabold ">
                       &nbsp;{time}
                     </span>
@@ -207,7 +208,7 @@ const Eventscard = (props) => {
             />
           </div>
         </div>
-        <dialog id={`my_modal_${props.id}`} className="modal">
+        <dialog id={`update_event_${props.id}`} className="modal">
           <Modalbox
             name={props.name}
             description={props.description}

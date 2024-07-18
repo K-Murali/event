@@ -3,6 +3,7 @@ import { BASE_URL } from "../utils/api";
 export const Eventcontext = createContext();
 
 const Event_State = (props) => {
+  const [loadval, setloadval] = useState(100);
   const [state, setState] = useState("some state"); // Example state
   const [alert, setalert] = useState(true);
   const [loadingflag, setloadingflag] = useState(false);
@@ -27,8 +28,11 @@ const Event_State = (props) => {
         options.body = JSON.stringify({ email, password });
         base_url = `${BASE_URL}/api/users/login`;
       }
+      setloadval(30);
       const res = await fetch(base_url, options);
+      setloadval(60);
       const json = await res.json();
+      setloadval(100);
       if (json.status == "success") {
         setuser(json.user);
         localStorage.setItem("token", json.token);
@@ -72,11 +76,14 @@ const Event_State = (props) => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       };
+      setloadval(30);
       const res = await fetch(
         `${BASE_URL}/api/events/getbyid/${eventid}`,
         options
       );
+      setloadval(60);
       const json = await res.json();
+      setloadval(100);
       return json;
     } catch (e) {
       console.log("this is error message" + e.message);
@@ -111,6 +118,7 @@ const Event_State = (props) => {
         },
         body: JSON.stringify(newnote),
       };
+      
       const res = await fetch(`${BASE_URL}/api/events/addevent`, options);
       const json = await res.json();
 
@@ -138,11 +146,14 @@ const Event_State = (props) => {
         },
       };
       setloadingflag(!loadingflag);
+      setloadval(30);
       const res = await fetch(
         `${BASE_URL}/api/events/delete/${eventid}`,
         options
       );
+      setloadval(60);
       const json = await res.json();
+      setloadval(100);
 
       if (json.status == "success") {
         setmessage("Successfully deleted");
@@ -169,11 +180,14 @@ const Event_State = (props) => {
         body: JSON.stringify(newevent),
       };
       setloadingflag(!loadingflag);
+      setloadval(30);
       const res = await fetch(
         `${BASE_URL}/api/events/update/${eventid}`,
         options
       );
+      setloadval(30);
       const json = await res.json();
+      setloadval(100);
 
       if (json.status == "success") {
         setmessage("Successfully updated");
@@ -199,8 +213,11 @@ const Event_State = (props) => {
           "Content-Type": "application/json",
         },
       };
+      setloadval(60);
       const res = await fetch(`${BASE_URL}/api/events/getuserevents`, options);
+      setloadval(80);
       const json = await res.json();
+      setloadval(100);
       return json;
     } catch (e) {
       console.log("this is error message" + e.message);
@@ -220,8 +237,11 @@ const Event_State = (props) => {
       if (query) {
         url = `${BASE_URL}/api/events/getallevents?${query}`;
       }
+      setloadval(30);
       const res = await fetch(url, options);
+      setloadval(60);
       const json = await res.json();
+      setloadval(100);
       return json;
     } catch (e) {
       console.log("this is error message" + e.message);
@@ -239,8 +259,11 @@ const Event_State = (props) => {
           "Content-Type": "application/json",
         },
       };
+      setloadval(30);
       const res = await fetch(`${BASE_URL}/api/events/getnewevents`, options);
+      setloadval(60);
       const json = await res.json();
+      setloadval(100);
       return json;
     } catch (e) {
       console.log("this is error message" + e.message);
@@ -395,6 +418,8 @@ const Event_State = (props) => {
         setmessage,
         loadingflag,
         setloadingflag,
+        loadval,
+        setloadval,
 
         // api calls
         signup,

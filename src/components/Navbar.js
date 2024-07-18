@@ -6,6 +6,7 @@ import { Eventcontext } from "../context/Event_State";
 import Alert from "./Alert";
 import { CiBellOn } from "react-icons/ci";
 import { IMAGE_URL } from "../utils/api";
+import Loader from "./Loadingbar";
 export default function Navbar({ user, setuser }) {
   const navigate = useNavigate();
 
@@ -58,6 +59,7 @@ export default function Navbar({ user, setuser }) {
     <>
       {/* {theme === "light" ? "dark" : "light"} */}
       {/* {theme === "light" ? "dark" : "light"} */}
+      <Loader />
       <div data-theme="dark">
         <div data-theme="dark">
           <div className="navbar  bg-base-100 h-fit ">

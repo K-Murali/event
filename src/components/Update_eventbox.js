@@ -10,15 +10,27 @@ const Modalbox = ({
   id,
   handleedit,
   onchange,
+  // Function to close the modal
 }) => {
+  const handleClose = () => {
+    document.getElementById(`update_event_${id}`).close();
+  };
   return (
     <div
       style={{
         scrollbarWidth: "none",
         msOverflowStyle: "none",
       }}
-      className="bg-white rounded-md h-3/4 overflow-scroll w-11/12 sm:w-full lg:w-4/6"
+      className="bg-white rounded-md h-3/4 overflow-scroll w-11/12 sm:w-full lg:w-4/6 relative" // Add relative positioning to the parent div
     >
+      {/* Close Button */}
+      <button
+        onClick={handleClose}
+        className="absolute top-2 right-2 bg-gray-200 rounded-full p-1"
+      >
+        X
+      </button>
+
       <form method="dialog">
         <div className="m-4 items-center flex flex-col">
           <h3 className="font-bold font-mono text-2xl">Edit here</h3>

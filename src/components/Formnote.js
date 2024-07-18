@@ -1,8 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Eventcontext } from "../context/Event_State";
+import { useNavigate } from "react-router-dom";
 import Alert from "./Alert";
 
 const Formnote = () => {
+  const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [newnote, setNewnote] = useState({
     name: "",
@@ -13,7 +15,8 @@ const Formnote = () => {
     photo: "",
   });
 
-  const { alert, setalert, setmessage, add_event } = useContext(Eventcontext);
+  const { alert, setalert, setmessage, setloadval, add_event } =
+    useContext(Eventcontext);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -57,13 +60,18 @@ const Formnote = () => {
       method: "POST",
       body: cloudinary,
     };
+    setloadval(20);
     const res = await fetch(
       `https://api.cloudinary.com/v1_1/drfvhp1jh/image/upload`,
       options
     );
+    setloadval(30);
     const ans = await res.json();
+    setloadval(40);
     newnote.photo = ans.url.split("upload/")[1];
-    add_event(newnote);
+    await add_event(newnote);
+    setloadval(50);
+    navigate("/myevents");
   };
 
   return (

@@ -24,31 +24,33 @@ const NewEvents = ({ user }) => {
   }, [loadingflag]);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-10 gap-5 w-full">
-      {events &&
-        events.map((e) => (
-          <Eventscard
-            key={e._id}
-            name={e.name}
-            id={e._id}
-            description={e.description.slice(0, 250)}
-            price={e.price}
-            venue={e.venue}
-            photo={e.photo}
-            eventtime={e.eventtime}
-            event={e}
-            reviewed={e.reviewed}
-            role={user.role}
-            path={"newevent"}
-          />
-        ))}
+    user && (
+      <div className="flex flex-col items-center justify-center mt-10 gap-5 w-full">
+        {events &&
+          events.map((e) => (
+            <Eventscard
+              key={e._id}
+              name={e.name}
+              id={e._id}
+              description={e.description.slice(0, 250)}
+              price={e.price}
+              venue={e.venue}
+              photo={e.photo}
+              eventtime={e.eventtime}
+              event={e}
+              reviewed={e.reviewed}
+              role={user.role}
+              path={"newevent"}
+            />
+          ))}
 
-      {events?.length == 0 && (
-        <div className="flex flex-col text-center align-middle justify-center items-center text-4xl">
-          No Recent Proposals.
-        </div>
-      )}
-    </div>
+        {events?.length == 0 && (
+          <div className="flex flex-col text-center align-middle justify-center items-center text-4xl">
+            No Recent Proposals.
+          </div>
+        )}
+      </div>
+    )
   );
 };
 

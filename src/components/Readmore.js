@@ -39,7 +39,7 @@ const Readmore = () => {
   }, []);
 
   return (
-    event &&
+    user &&
     event && (
       <div className="flex justify-center items-center align-middle  lg:mt-12 w-full ">
         <div className="    lg:flex-row flex  flex-col sm:w-full md:full lg:w-4/6 justify-center items-center   rounded-lg bg-white shadow-lg">

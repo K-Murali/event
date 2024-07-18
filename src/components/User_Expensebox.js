@@ -38,12 +38,8 @@ const Expensebox = ({ id, name }) => {
     fetchExpenses();
   };
 
-  const handleEdit = async (expense_id) => {
-    // Handle edit logic here
-  };
-
-  const handleDelete = async (expense_id) => {
-    // Handle delete logic here
+  const handleClose = () => {
+    document.getElementById(`update_expense_${id}`).close();
   };
 
   const renderTable = (type) => (
@@ -115,13 +111,22 @@ const Expensebox = ({ id, name }) => {
             onSubmit={handleSubmit}
             className="bg-white  p-6 lg:h-fit w-full  md:h-3/4 md:overflow-y-scroll rounded-lg shadow-lg lg:w-3/4  relative"
           >
-            <button
-              type="button"
-              onClick={fetchExpenses}
-              className="text-sm  underline absolute top-2 right-2 text-blue-500 hover:text-gray-700"
-            >
-              {"<-back"}
-            </button>
+            <div className="flex gap-3 justify-center">
+              <button
+                type="button"
+                onClick={fetchExpenses}
+                className="text-sm  underline absolute top-2 right-13 text-blue-500 hover:text-gray-700"
+              >
+                {"<-back"}
+              </button>
+              <button
+                type="button"
+                onClick={handleClose}
+                className="text-sm  underline absolute top-2 right-2 text-blue-500 hover:text-gray-700"
+              >
+                {"close"}
+              </button>
+            </div>
             <label
               htmlFor="amount"
               className="block text-sm font-medium text-gray-700"
@@ -203,8 +208,14 @@ const Expensebox = ({ id, name }) => {
       </div>
       {showTables && (
         <div className="flex flex-col h-3/4 justify-center items-center">
+          <button
+            type="button"
+            onClick={handleClose}
+            className="text-sm  underline absolute top-10 right-10 text-blue-500 hover:text-gray-700"
+          >
+            {"X"}
+          </button>{" "}
           <div className="flex justify-center  font-semibold text-center text-2xl lg:text-2xl text-black">
-            {" "}
             Your Exepnses for {name}
           </div>
           <div className="flex lg:flex-row h-full flex-col  w-full">
@@ -222,12 +233,13 @@ const Expensebox = ({ id, name }) => {
               Add new data
             </button>
             <button
-              onClick={() => {
-                navigate("/expenses");
-              }}
+              onClick={handleClose}
+              // onClick={() => {
+              //   navigate("/expenses");
+              // }}
               className="mt-5 border-2 w-fit bg-blue-500 p-1 rounded-md text-white"
             >
-              Edit Expenses
+              Close Tab
             </button>
           </div>
         </div>

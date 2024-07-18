@@ -11,6 +11,7 @@ import UserEvents from "./components/User_Events";
 import NewEvents from "./components/NewEvents";
 import Readmore from "./components/Readmore";
 import Mybookings from "./components/Mybookings";
+import Loader from "./components/Loadingbar";
 
 const App = () => {
   const [user, setuser] = useState(null);
@@ -78,6 +79,7 @@ const App = () => {
       <Event_State>
         <div>
           <Router>
+            
             <Navbar user={user} setuser={setuser} />
 
             <Routes>
