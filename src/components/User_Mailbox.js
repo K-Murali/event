@@ -29,8 +29,8 @@ const Mailbox = (props) => {
   };
 
   const handleSeePastMessages = async () => {
-    await handlenotify();
     setIsFormVisible(false);
+    await handlenotify();
   };
   const handleClose = () => {
     document.getElementById(`send_mail_${props.id}`).close();
@@ -59,13 +59,13 @@ const Mailbox = (props) => {
                   >
                     past messages
                   </div>
-                  <button
+                  <div
                     type="button"
                     onClick={handleClose}
-                    className="text-sm  border-0 underline text-blue-500 hover:text-gray-700"
+                    className="text-sm w-fit flex justify-center  border-0 underline text-blue-500 hover:text-gray-700"
                   >
                     close
-                  </button>
+                  </div>
                 </div>
               </label>
               <textarea

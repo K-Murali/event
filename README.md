@@ -52,24 +52,26 @@
 
     Home Page
 
-<img src="./src/utils/Homepage.png" alt="HomePage" title="home">
+<img src="./src/utils/readme_images/home.png" alt="HomePage" title="home">
 
-    Post Page
+    Event Insights
 
-<img src="./src/utils/Postpage.png" alt="CreatePostPage" title="post page">
+<img src="./src/utils/readme_images/eventinsights.png" alt="CreatePostPage" title="post page">
      
-     Filters
+   Event expense
 
-<img src="./src/utils/filters.png" alt="CreatePostPage" title="post page">
+<img src="./src/utils/readme_images/event_expenses.png" alt="CreatePostPage" title="post page">
 
-    Tour detail page
+    Event detail page
 
-<img src="./src/utils/Tourdetailpage.png" alt="details page" title="details page">
+<img src="./src/utils/readme_images/event_detail.png" alt="details page" title="details page">
 
-    Userprofile
+    Event registrtion
 
-<img src="./src/utils/Userprofile.png" alt="userprofile" title="userprofile">
+<img src="./src/utils/readme_images/event_registration.png" alt="booking page" title="booking page">
 
-    Tour booking page
+    update box, message box
 
-<img src="./src/utils/Tourbookingpage.png" alt="booking page" title="booking page">
+<img src="./src/utils/readme_images/Screenshot 2024-07-19 114455.png" alt="userprofile" title="userprofile">
+
+ <img src="./src/utils/readme_images/Screenshot 2024-07-19 114422.png" alt="userprofile" title="userprofile">

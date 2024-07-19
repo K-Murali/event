@@ -60,10 +60,10 @@ const BookingsCard = (props) => {
                 </div>
 
                 <p className="mt-4  hidden md:flex lg:flex leading-normal">
-                  {event.description.slice(0, 250)}...{" "}
+                  {event.description?.slice(0, 250)}...{" "}
                 </p>
                 <p className="mt-4   text-md flex lg:hidden md:hidden  leading-normal">
-                  {event.description.slice(0, 250)}...{" "}
+                  {event.description?.slice(0, 250)}...{" "}
                 </p>
                 <div className="flex flex-col justify-center mt-4 text-gray-700">
                   <div className="w-full flex flex-row justify-between items-center">
