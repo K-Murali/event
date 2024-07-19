@@ -68,10 +68,14 @@
 
     Event registrtion
 
-<img src="./src/utils/readme_images/event_registration.png" alt="booking page" title="booking page">
+<img src="./src/utils/readme_images/Screenshot 2024-07-19 115432.png" alt="booking page" title="booking page">
 
     update box, message box
 
 <img src="./src/utils/readme_images/Screenshot 2024-07-19 114455.png" alt="userprofile" title="userprofile">
 
- <img src="./src/utils/readme_images/Screenshot 2024-07-19 114422.png" alt="userprofile" title="userprofile">
+<img src="./src/utils/readme_images/event_registration.png" alt="userprofile" title="userprofile">
+
+    Notifications
+
+<img src="./src/utils/readme_images/Screenshot 2024-07-19 114526.png" alt="userprofile" title="userprofile">
