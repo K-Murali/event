@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Natours App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Project Overview](#project-overview)
+- [Installation](#installation)
+- [Features](#features)
+- [Screenshots](#screenshots)
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+1. Destination Exploration: Users can discover different tourist spots throughout India by searching and filtering .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Tour Guide Booking: Users can book a tour guide for their upcoming trips.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. User Interaction: Users can post, delete, and edit their recent travel experiences. They can also engage with other posts by liking and commenting.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Download the zip folder.
+2. Extract the folder.
+3. Go to this location in your vscode terminal.
+4. create your environment
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Tours: Users can easily access detailed information about the places they wish to visit.
+2. Interaction: Users can engage with the community by liking and commenting on tours they find interesting.
+3. Clear Tour Details: Comprehensive details about tours are provided, including nearby places, expense information, and other relevant details.
+4. Tour Search: Users can conveniently search for events by location, tags, and various filter options to find the perfect tour.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Home Page
 
-### `npm run eject`
+<img src="./src/utils/Homepage.png" alt="HomePage" title="home">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Post Page
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./src/utils/Postpage.png" alt="CreatePostPage" title="post page">
+     
+     Filters
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="./src/utils/filters.png" alt="CreatePostPage" title="post page">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Tour detail page
 
-## Learn More
+<img src="./src/utils/Tourdetailpage.png" alt="details page" title="details page">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Userprofile
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="./src/utils/Userprofile.png" alt="userprofile" title="userprofile">
 
-### Code Splitting
+    Tour booking page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="./src/utils/Tourbookingpage.png" alt="booking page" title="booking page">
