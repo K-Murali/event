@@ -17,7 +17,7 @@
 
 4. Event insights.
 
-5. Budeget tracking.
+5. Budget tracking.
 
 6. Audience Management.
 
