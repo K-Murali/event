@@ -1,4 +1,4 @@
-# Natours App
+# Event Planner
 
 ## Table of Contents
 
@@ -9,11 +9,17 @@
 
 ## Project Overview
 
-1. Destination Exploration: Users can discover different tourist spots throughout India by searching and filtering .
+1. Event Exploration.
 
-2. Tour Guide Booking: Users can book a tour guide for their upcoming trips.
+2. Event Registration.
 
-3. User Interaction: Users can post, delete, and edit their recent travel experiences. They can also engage with other posts by liking and commenting.
+3. Event Hosting.
+
+4. Event insights.
+
+5. Budeget tracking.
+
+6. Audience Management.
 
 ## Installation
 
@@ -24,10 +30,23 @@
 
 ## Features
 
-1. Tours: Users can easily access detailed information about the places they wish to visit.
-2. Interaction: Users can engage with the community by liking and commenting on tours they find interesting.
-3. Clear Tour Details: Comprehensive details about tours are provided, including nearby places, expense information, and other relevant details.
-4. Tour Search: Users can conveniently search for events by location, tags, and various filter options to find the perfect tour.
+1. Event Exploration
+   Easily explore upcoming events with detailed information to help attendees make informed decisions.
+
+2. Event Registration
+   Simplify the registration process, offering a seamless and user-friendly experience for participants.
+
+3. Event Hosting
+   Provide essential tools and support for efficient event management and execution.
+
+4. Event Insights (Reach and Registration)
+   Gain valuable insights on event performance, including audience reach and registration metrics.
+
+5. Budget Tracking for Events (Income and Expenses)
+   Track event budgets accurately, managing income and expenses for financial transparency.
+
+6. Sending Personalized Messages to Audience
+   Send personalized messages to the audience, enhancing engagement and the overall event experience.
 
 ## Screenshots
 
