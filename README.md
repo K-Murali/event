@@ -30,22 +30,22 @@
 
 ## Features
 
-1. Event Exploration\n
+1. **Event Exploration**
    Easily explore upcoming events with detailed information to help attendees make informed decisions.
 
-2. Event Registration\n
+2. **Event Registration**
    Simplify the registration process, offering a seamless and user-friendly experience for participants.
 
-3. Event Hosting\n
+3. **Event Hosting**
    Provide essential tools and support for efficient event management and execution.
 
-4. Event Insights (Reach and Registration)\n
+4. **Event Insights (Reach and Registration)**
    Gain valuable insights on event performance, including audience reach and registration metrics.
 
-5. Budget Tracking for Events (Income and Expenses)\n
+5. **Budget Tracking for Events (Income and Expenses)**
    Track event budgets accurately, managing income and expenses for financial transparency.
 
-6. Sending Personalized Messages to Audience\n
+6. **Sending Personalized Messages to Audience**
    Send personalized messages to the audience, enhancing engagement and the overall event experience.
 
 ## Screenshots
