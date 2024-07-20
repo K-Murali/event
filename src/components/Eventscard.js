@@ -188,7 +188,7 @@ const Eventscard = (props) => {
                       reviewed ? "" : "hidden"
                     } text-purple-600  hidden md:flex lg:flex cursor-pointer`}
                   >
-                    Register Now
+                    &#8377; {props.event.price}
                   </div>
                   <div className="text-sm text-gray-600">
                     -by {props.event.host.name} on {postdate.getDate()}&nbsp;

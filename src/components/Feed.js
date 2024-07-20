@@ -3,13 +3,15 @@ import { useEffect, useState, useContext } from "react";
 import { Eventcontext } from "../context/Event_State";
 import Eventscard from "./Eventscard";
 import { useNavigate } from "react-router-dom";
+import Filters from "./Filters";
 const Feed = ({ user }) => {
   const naviagte = useNavigate();
-  const [events, setEvents] = useState(null);
-  const { get_all_events, loadingflag } = useContext(Eventcontext);
+
+  const { get_all_events, events, setEvents, loadingflag } =
+    useContext(Eventcontext);
 
   useEffect(() => {
-    if (!localStorage.getItem("token")) {
+    if (localStorage.getItem("token")?.length == 0) {
       console.log("No token");
       naviagte("/signup");
       return;
@@ -23,12 +25,15 @@ const Feed = ({ user }) => {
       ? window.location.href.split("?")[1]
       : null;
     const res = await get_all_events(query);
-    setEvents(res.data);
     naviagte("/event");
   };
 
   return (
-    <div className="flex flex-col items-center justify-center mt-10 gap-5 w-full">
+    <div className="flex flex-col items-center justify-center gap-5 w-full">
+      <Filters
+        className={` me-2  bg-slate-600  mt-10  rounded text-white  w-16 h-8 
+          }`}
+      />
       {events &&
         user &&
         events.map((e) => (

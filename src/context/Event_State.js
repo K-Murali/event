@@ -3,12 +3,24 @@ import { BASE_URL } from "../utils/api";
 export const Eventcontext = createContext();
 
 const Event_State = (props) => {
+  const [events, setEvents] = useState(null);
   const [loadval, setloadval] = useState(100);
   const [state, setState] = useState("some state"); // Example state
   const [alert, setalert] = useState(true);
   const [loadingflag, setloadingflag] = useState(false);
   const [user, setuser] = useState(null);
   const [message, setmessage] = useState("welcome");
+  const [query, setQuery] = useState({
+    date: {
+      gte: "",
+      lte: "",
+    },
+    price: {
+      lte: "10000",
+    },
+    sort: "",
+    keyword: "",
+  });
 
   const signup = async (details, loginflag) => {
     try {
@@ -242,6 +254,7 @@ const Event_State = (props) => {
       setloadval(60);
       const json = await res.json();
       setloadval(100);
+      setEvents(json.data);
       return json;
     } catch (e) {
       console.log("this is error message" + e.message);
@@ -412,6 +425,8 @@ const Event_State = (props) => {
     <Eventcontext.Provider
       value={{
         // states
+        events,
+        setEvents,
         alert,
         setalert,
         message,
@@ -420,6 +435,8 @@ const Event_State = (props) => {
         setloadingflag,
         loadval,
         setloadval,
+        query,
+        setQuery,
 
         // api calls
         signup,
