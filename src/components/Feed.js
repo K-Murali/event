@@ -34,8 +34,7 @@ const Feed = ({ user }) => {
         className={` me-2  bg-slate-600  mt-10  rounded text-white  w-16 h-8 
           }`}
       />
-      {events &&
-        user &&
+      {events?.length != 0 && user ? (
         events.map((e) => (
           <Eventscard
             key={e._id}
@@ -51,7 +50,12 @@ const Feed = ({ user }) => {
             path={"feed"}
             reviewed={e.reviewed}
           />
-        ))}
+        ))
+      ) : (
+        <div className="flex justify-center items-center h-full">
+          No Events to display. . .
+        </div>
+      )}
     </div>
   );
 };
