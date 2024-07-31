@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { IMAGE_URL } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 import "./readmore.css";
 import BookTourButton from "../utils/bookings";
 import { AiOutlineLike } from "react-icons/ai";
@@ -7,6 +8,7 @@ import { FaRegComment } from "react-icons/fa";
 import { Eventcontext } from "../context/Event_State";
 
 const Readmore = ({ user }) => {
+  const navigate = useNavigate();
   const [event, setevent] = useState(null);
   const [booked, setbooked] = useState(null);
   const { get_event_byid } = useContext(Eventcontext);
@@ -28,12 +30,18 @@ const Readmore = ({ user }) => {
 
   useEffect(() => {
     const caller = async () => {
-      const eventid = localStorage.getItem("eventid");
-      console.log(eventid);
-      const res = await get_event_byid(eventid);
+      if (!localStorage.getItem("token")) {
+        console.log("No token");
+        navigate("/signup");
+        return;
+      } else {
+        const eventid = localStorage.getItem("eventid");
+        console.log(eventid);
+        const res = await get_event_byid(eventid);
 
-      setevent(res.data);
-      setbooked(res.booked);
+        setevent(res.data);
+        setbooked(res.booked);
+      }
     };
     caller();
   }, []);

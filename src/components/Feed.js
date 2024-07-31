@@ -13,7 +13,8 @@ const Feed = ({ user }) => {
   useEffect(() => {
     if (!localStorage.getItem("token")) {
       console.log("No token");
-      naviagte("/signup");
+      handlebooking();
+      // navigate("/signup");
       return;
     } else {
       handlebooking();
@@ -35,7 +36,7 @@ const Feed = ({ user }) => {
           className={` me-2  bg-slate-600  mt-10  rounded text-white  w-16 h-8 
           }`}
         />
-        {events?.length != 0 && user ? (
+        {events?.length != 0 ? (
           events.map((e) => (
             <Eventscard
               key={e._id}
@@ -47,7 +48,11 @@ const Feed = ({ user }) => {
               photo={e.photo}
               eventtime={e.eventtime}
               event={e}
-              role={user.role}
+              role={
+                localStorage.getItem("role")
+                  ? localStorage.getItem("role")
+                  : "user"
+              }
               path={"feed"}
               reviewed={e.reviewed}
             />
