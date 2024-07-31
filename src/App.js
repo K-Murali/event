@@ -12,6 +12,7 @@ import NewEvents from "./components/NewEvents";
 import Readmore from "./components/Readmore";
 import Mybookings from "./components/Mybookings";
 import Loader from "./components/Loadingbar";
+import ClassComponent from "./components/ClassComponent";
 
 const App = () => {
   const [user, setuser] = useState(null);
@@ -87,6 +88,7 @@ const App = () => {
                 path="/addevent"
                 element={<Formnote user={user} />}
               />
+              <Route exact path="/class" element={<ClassComponent />} />
               <Route
                 exact
                 path="/signup"

@@ -50,7 +50,7 @@ export default function Navbar({ user, setuser }) {
   const handlelogout = (e) => {
     e.preventDefault();
     setuser(null);
-    localStorage.setItem("token", "");
+    localStorage.removeItem("token");
     localStorage.setItem("role", "user");
     navigate("/signup");
   };
@@ -233,19 +233,17 @@ export default function Navbar({ user, setuser }) {
                                 className="text-black justify-between p-2  flex"
                                 key={e._id}
                               >
-                                <div className="text-sm   text-gray-800">
+                                <div className="text-sm w-5/6  text-gray-800">
                                   <span className="text-blue-500 underline font-bold">
                                     {e.eventname}
                                   </span>{" "}
                                   : {e.message}
                                 </div>
-                                <div className="text-gray-600  text-bold   font-bold text-sm">
+                                <div className="text-gray-600 pl-2 text-bold w-1/6 font-bold text-xsm">
                                   {new Date(e.createdAt).getDate()}{" "}
                                   {new Date(e.createdAt).toLocaleString(
                                     "default",
-                                    {
-                                      month: "short",
-                                    }
+                                    { month: "short" }
                                   )}
                                 </div>
                               </div>

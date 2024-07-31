@@ -11,7 +11,7 @@ const Feed = ({ user }) => {
     useContext(Eventcontext);
 
   useEffect(() => {
-    if (localStorage.getItem("token")?.length == 0) {
+    if (!localStorage.getItem("token")) {
       console.log("No token");
       naviagte("/signup");
       return;
@@ -29,34 +29,36 @@ const Feed = ({ user }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-5 w-full">
-      <Filters
-        className={` me-2  bg-slate-600  mt-10  rounded text-white  w-16 h-8 
+    events && (
+      <div className="flex flex-col items-center justify-center gap-5 w-full">
+        <Filters
+          className={` me-2  bg-slate-600  mt-10  rounded text-white  w-16 h-8 
           }`}
-      />
-      {events?.length != 0 && user ? (
-        events.map((e) => (
-          <Eventscard
-            key={e._id}
-            name={e.name}
-            id={e._id}
-            description={e.description.slice(0, 250)}
-            price={e.price}
-            venue={e.venue}
-            photo={e.photo}
-            eventtime={e.eventtime}
-            event={e}
-            role={user.role}
-            path={"feed"}
-            reviewed={e.reviewed}
-          />
-        ))
-      ) : (
-        <div className="flex justify-center items-center h-full">
-          No Events to display. . .
-        </div>
-      )}
-    </div>
+        />
+        {events?.length != 0 && user ? (
+          events.map((e) => (
+            <Eventscard
+              key={e._id}
+              name={e.name}
+              id={e._id}
+              description={e.description.slice(0, 250)}
+              price={e.price}
+              venue={e.venue}
+              photo={e.photo}
+              eventtime={e.eventtime}
+              event={e}
+              role={user.role}
+              path={"feed"}
+              reviewed={e.reviewed}
+            />
+          ))
+        ) : (
+          <div className="flex justify-center items-center h-full">
+            No Events to display. . .
+          </div>
+        )}
+      </div>
+    )
   );
 };
 
